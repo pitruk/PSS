@@ -1,0 +1,61 @@
+<html>
+<head>
+	<title>BlueMC - Sklep</title>
+	<link rel="shortcut icon" href="../inc/images/favicon.ico">
+	<meta charset="utf-8">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="../inc/css/w3.css">
+	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">-->
+	<link rel="stylesheet" href="../inc/css/ajax/materialize.css">
+	<link rel="stylesheet" href="../inc/css/main.css">
+	<link rel="stylesheet" href="../inc/css/sklep/main.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+	<script src="../inc/js/sklep/sklep.js" type="text/javascript"></script>
+	<script src="../inc/js/sklep/shop.js" type="text/javascript"></script>
+	<script src="../inc/js/sklep/modal.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+	<style>
+		#counter{
+			background-color: steelblue;
+			height: 30px;
+			width: 100%;
+		}
+		.counter-text{
+			background-color: indianred;
+			height: 30px;
+			text-align: center;
+			color: white;
+			font-size: 16px;
+		}
+	</style>
+</head>
+<body>
+	<nav>
+	  <div class="nav-wrapper">
+		 <img class="logo" src="../inc/images/logo_male.png"/> <a href="../" class="text-logo">BlueMC.PL</a>
+		 <ul class="right hide-on-med-and-down">
+		   <li><a href="../" ><p class="fa fa-home"></p> GŁÓWNA</a></li>
+		   <li><a href="../sklep" class="target"><p class="fa fa-dollar-sign"></p> SKLEP</a></li>
+		   <li><a href="../sklep/opis.php"><div style='background-color: rgba(53, 237, 240,0.2)'><p class="fa fa-list"></p> OPIS RANG</a></div></li>
+		   <li><a href="../forum"><p class="fa fa-folder"></p> FORUM</a></li>
+		   <li><a href="../bany"><p class="fa fa-ban"></p> BANY</a></li>
+		 </ul>
+	  </div>
+	</nav>
+<br>
+	<div class="container w3-animate-zoom">
+
+			<div class="body ostatnie_zakupy" style='color: white;'>
+<h5>Zmiana cen w Sklepie WWW od 4 listopada 2021</h5><br>
+<img src="images/sms.png"/><br><br>
+<img src="images/pp.png"/><br><br>
+<img src="images/przelew.png"/><br>
+		</div>
+<?php include("alert2.php"); ?>
+</div><div style="margin-right: 100%">
+<?php include("../inc/footer.php"); ?></div>
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js" type="text/javascript"></script>
+	<script src="../inc/js/firefly.js" type="text/javascript"></script>
+	<script src="../inc/js/main.js" type="text/javascript"></script>
+</body>
+</html>

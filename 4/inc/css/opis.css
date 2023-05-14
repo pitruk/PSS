@@ -1,0 +1,208 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
+
+.opis_rang {
+	background-color: rgba(0,0,0, 0.2);
+	color: #ddd;
+	margin: 10px 1;
+	margin-top: 20px;
+	position: relative;
+	border-radius: 1px;
+	width: 100%;
+	padding: 9% 1% 1% 1%;
+    font-weight: 400;
+    font-size: 20px;
+	text-align: center;
+	height: auto;
+	padding-bottom: 20px;
+	margin-top: -100px;
+	font-family: 'Quicksand';
+}
+
+.opis{
+	margin-top: -85px;
+	color: #ddd;
+}
+
+table.opis thead th {
+	background-color: rgba(0, 206, 209, 0.5);
+	border-radius: 0;
+	color: white;
+	font-weight: 700;
+	font-size: 15px;
+	text-align: center;
+	border-bottom: 3px solid #026264;
+}
+
+table.opis tr:nth-child(odd) {
+	background-color: #333;
+	color: #eee;
+	border-right: 1px solid #555;
+}
+
+table.opis th.feature {
+	background-color: rgba(0, 206, 209, 0.5);
+	color: #eee;
+	/*border-right: 1px solid #555;*/
+}
+
+table.opis td.feature:nth-child(odd) {
+	border-right: 1px solid #555;
+	border-left: 1px solid #555;
+	width: 20%;
+	color: #eee;
+	font-weight: 500;
+	background: rgba(50,50,50,0.8);
+}
+
+table.opis td.features {
+	border-right: 1px solid #555;
+	border-left: 1px solid #555;
+	width: 20%;
+	color: #eee;
+	font-weight: 500;
+	background: rgba(50,50,50,0.8);
+}
+
+table.opis td {
+	text-align: center;
+	width: 15%;
+	font-weight: 600;
+	font-size: 13px;
+	padding: 10px;
+	background: rgba(50,50,50,0.8);
+	color: #eee;
+	border-right: 1px solid #555;
+	border-left: 1px solid #555;
+}
+
+table.opis tr.separator td{
+	border-radius: 0;
+	color: #eee;
+	font-weight: 600;
+	font-size: 18px;
+	text-align: center;
+	border-bottom: 3px solid #0277BD;
+	padding: 10px;
+}
+
+table.opis tr.hub td{
+	background-color: rgba(0,102,255,0.6);
+	border-bottom: 1px solid #00B8D4;
+}
+
+table.opis tr.uhc td{
+	background-color: rgba(240,128,128,0.6);
+	border-bottom: 1px solid #FA8072;
+}
+table.opis tr.tntrun td{
+	background-color: rgba(255, 51, 102,0.6);
+	border-bottom: 1px solid #FF0033 ;
+}
+table.opis tr.oneblock td{
+	background-color: rgba(40,170,0,0.8);
+	border-bottom: 1px solid #08c764;
+}
+
+.fa-check {
+	color: #00CC66;
+}
+
+.fa-times {
+	color: #FF7272;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+	color: #80CBC4;
+	margin-left: 10px;
+	font-size: 15px;
+	transition: 0.15s;
+	cursor: help;
+	padding-top: 5px;
+}
+
+.tooltip:hover {
+    position: relative;
+    display: inline-block;
+	color: #26A69A;
+	margin-left: 10px;
+	font-size: 15px;
+	transition: 0.3s;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #2A2A2A;
+    color: #fff;
+	font-size: 13px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 21px;
+    left: -53px;
+	font-family: 'Quicksand';
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #2A2A2A transparent transparent transparent;
+	font-family: 'Quicksand';
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+	opacity: 0.9;
+	font-family: 'Quicksand';
+}
+
+.shadow {
+	transition: 0.2s;
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.shadow_hover:hover {
+  transition: 0.7s;
+  box-shadow: 0px 10px 47px -7px #37474F;
+}
+
+
+.lista_banow {
+	background-color: rgba(0,0,0, 0.2);
+	color: #ddd;
+	margin: 90px 1;
+	margin-top: -100px;
+	position: relative;
+	border-radius: 1px;
+	width: 50%;
+    font-weight: 400;
+    font-size: 20px;
+	text-align: center;
+	height: auto;
+	padding: 3px 5px 5px 5px;
+	font-family: 'Quicksand';
+}
+
+.lista_banow2 {
+	background-color: rgba(0,0,0, 0.2);
+	color: #ddd;
+	margin-top: 50px;
+	position: relative;
+	border-radius: 1px;
+	width: 50%;
+    font-weight: 400;
+    font-size: 20px;
+	text-align: center;
+	height: auto;
+	padding: 3px 5px 5px 5px;
+	font-family: 'Quicksand';
+}

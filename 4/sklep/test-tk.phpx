@@ -1,0 +1,84 @@
+<html>
+<head>
+	<title>BlueMC - Sklep</title>
+	<link rel="shortcut icon" href="../inc/images/favicon.ico">
+	<meta charset="utf-8">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="../inc/css/w3.css">
+	<link rel="stylesheet" href="../inc/css/ajax/materialize.css">
+	<link rel="stylesheet" href="../inc/css/main.css">
+	<link rel="stylesheet" href="../inc/css/sklep/main.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+	<script src="../inc/js/sklep/sklep.js" type="text/javascript"></script>
+	<script src="../inc/js/sklep/shop.js" type="text/javascript"></script>
+	<script src="../inc/js/sklep/modal.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+</head>
+<body>
+	<nav>
+	  <div class="nav-wrapper">
+		 <img class="logo" src="../inc/images/logo_male.png"/> <a href="../" class="text-logo">BlueMC.PL</a>
+		 <ul class="right hide-on-med-and-down">
+		   <li><a href="../" ><p class="fa fa-home"></p> GŁÓWNA</a></li>
+		   <li><a href="../sklep" class="target"><p class="fa fa-dollar-sign"></p> SKLEP</a></li>
+		   <li><a href="../sklep/opis.php"><p class="fa fa-list"></p> OPIS RANG</a></li>
+		   <li><a href="../forum"><p class="fa fa-folder"></p> FORUM</a></li>
+		   <li><a href="../kary"><p class="fa fa-ban"></p> LISTA KAR</a></li>
+		 </ul>
+	  </div>
+	</nav>
+<br>
+	<div class="container w3-animate-zoom">
+<?php
+	require '../config/konfiguracja_mysql.php';
+	
+	// Create connection
+	$conn = new mysqli($servername, $username, $password, $dbname);
+	
+	// Check connection
+	if ($conn->connect_error) {
+		die("Connection failed: " . $conn->connect_error);
+	}
+	$sql = "SELECT * FROM Przedmioty WHERE Typ='tokeny' ORDER BY Sort ASC";
+	$result = $conn->query($sql);
+	
+	if ($result->num_rows > 0) {
+		// output data of each row
+		while($row = $result->fetch_assoc()) {
+			echo "<li><a href='javascript:void(0);' onclick='document.getElementById(`id". $row['ID'] ."`).style.display=`block`;sms(". $row['SMSCena'] ."," . $row['SMSNumer'] .",". $row['ID'] .")'' id=`myBtn`><img id='myBtn' src='". $row["Obrazek"] ."'></a></li>";
+			echo "  <div id='id". $row['ID'] ."' class='w3-modal w3-animate-opacity'>
+						<div class='modalshop'>
+						  <header> 
+							<span onclick='document.getElementById(`id". $row['ID'] ."`).style.display=`none`' 
+							class='times'><a href='javascript:void(0);' id='tokeny'><p class='fa fa-times'></p></a></span>
+							<p><b>". $row["Tytul"] ."</p></b><br>
+						  </header>
+								<nav2>
+									<a onclick='sms(". $row['SMSCena'] ."," . $row['SMSNumer'] .",". $row['ID'] .")' href='javascript:void(0);'><i class='fa fa-phone'></i> SMS</a>
+									<a onclick='paypal(". $row['PrzelewCena'] .",". $row['ID'] .")' href='javascript:void(0);'><i class='fa fa-paypal'></i> PayPal</a><br>
+									<div id='navi". $row['ID'] ."'class='animation sms'></div>
+								</nav2>
+									<p class='opis' id='info". $row['ID'] ."'>Wyślij SMS o treści <b>MSMS.BMC</b> na numer <b>". $row['SMSNumer'] ."</b></p>
+									<p class='opis' id='koszt". $row['ID'] ."'>Koszt: ". $row['SMSCena'] ."zł</p>
+									<form class='paypal' action='' method='post' id='paypal_form". $row['ID'] ."'>
+										<br><input type='text' id='nick". $row['ID'] ."' name='nick' placeholder='NAZWA W GRZE'  maxlength='16' required>
+										<input type='hidden' name='cmd' value='_xclick' />
+										<input type='hidden' name='ID' value='". $row['ID'] ."' />
+										<input type='text' id='kod". $row['ID'] ."' name='kod' placeholder='KOD ZWROTNY' maxlength='8'><br>
+										<button type='submit' id='submit". $row['ID'] ."' class='zrealizuj' name='submit'><i class='fa fa-check'></i> Zrealizuj</button>
+									</form>
+						</div>
+					  </div>";
+	   }
+	} else {
+	  echo "0 results";
+	}
+	$conn->close();
+?>
+		
+<?php include("../inc/footer.php"); ?></div>
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js" type="text/javascript"></script>
+	<script src="../inc/js/firefly.js" type="text/javascript"></script>
+	<script src="../inc/js/main.js" type="text/javascript"></script>
+</body>
+</html>

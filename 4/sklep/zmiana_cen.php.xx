@@ -1,0 +1,301 @@
+<html>
+<head>
+	<title>BlueMC - Zmiana cen</title>
+	<link rel="shortcut icon" href="../inc/images/favicon.ico">
+	<meta charset="utf-8">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="../inc/css/w3.css">
+	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">-->
+	<link rel="stylesheet" href="../inc/css/ajax/materialize.css">
+	<link rel="stylesheet" href="../inc/css/main.css">
+	<link rel="stylesheet" href="../inc/css/sklep/main.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+	<script src="../inc/js/sklep/sklep.js" type="text/javascript"></script>
+	<script src="../inc/js/sklep/shop.js" type="text/javascript"></script>
+	<script src="../inc/js/sklep/modal.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+	<style>
+		table{
+			width: 70%;
+			text-align: center;
+			margin-left: 15%;
+			background-color: rgba(10,10,10,0.4);
+			color: white;
+			border: 2px solid #444;
+		}
+		tr{
+			border: 2px solid #333;
+			text-align: center;
+		}
+		td{
+			border: 2px solid #333;
+			text-align: center;
+		}
+		th{
+			border: 2px solid #333;
+			text-align: center;
+			width: 50%;
+		}
+		.th-new{
+			background-color: rgba(50,205,50,0.6);
+			text-align: center;
+			width: 25%;
+		}
+		.th-old{
+			background-color: rgba(220,20,60,0.6);
+			text-align: center;
+			width: 25%;
+		}
+		.th-item{
+			background-color: rgba(255,125,0,0.6);
+			text-align: center;
+			width: 50%;
+		}
+		.main{
+			background-color: rgba(0,191,255,0.5);
+			color: white;
+			border: 2px solid #333;
+			text-align: center;
+			height: 50px;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<nav>
+	  <div class="nav-wrapper">
+		 <img class="logo" src="../inc/images/logo_male.png"/> <a href="../" class="text-logo">BlueMC.PL</a>
+		 <ul class="right hide-on-med-and-down">
+		   <li><a href="../" ><p class="fa fa-home"></p> GŁÓWNA</a></li>
+		   <li><a href="../sklep" class="target"><p class="fa fa-dollar-sign"></p> SKLEP</a></li>
+		   <li><a href="../sklep/opis.php"><div style='background-color: rgba(53, 237, 240,0.2)'><p class="fa fa-list"></p> OPIS RANG</a></div></li>
+		   <li><a href="../forum"><p class="fa fa-folder"></p> FORUM</a></li>
+		   <li><a href="../bany"><p class="fa fa-ban"></p> BANY</a></li>
+		 </ul>
+	  </div>
+	</nav>
+<br>
+	<div class="container w3-animate-zoom">
+<br>
+			<div class="body ostatnie_zakupy" style='color: white;'>
+<h5>Zmiana cen w Sklepie WWW od 4 listopada 2021.</h5><br>
+<table>
+<tr><td class='main' colspan='3'><b>Ceny - SMS</b></tr></td>
+  <tr>
+    <th class='th-item'><b>Przedmiot</b></th>
+    <th class='th-old'><b>Stara cena</b></th>
+    <th class='th-new'><b>Nowa cena</b></th>
+  </tr>
+  <tr>
+    <td>500 tokenów</td>
+    <td>6,15 zł</td>
+    <td>11,07 zł</td>
+  </tr>
+  <tr>
+    <td>1000 tokenów</td>
+    <td>11,07 zł</td>
+    <td>23,37 zł</td>
+  </tr>
+  <tr>
+    <td>2000 tokenów</td>
+    <td>23,37 zł</td>
+    <td>30,75 zł</td>
+  </tr>
+  <tr>
+    <td>3000 tokenów</td>
+    <td>30,75 zł</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>5500 tokenów</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>12 000 tokenów</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>VIP (30 dni)</td>
+    <td>23,37 zł</td>
+    <td>30,75 zł</td>
+  </tr>
+  <tr>
+    <td>VIP (na zawsze)</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>MegaVIP (30 dni)</td>
+    <td>30,75 zł</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>MegaVIP (na zawsze)</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>MegaVIP+ (30 dni)</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>MegaVIP+ (365 dni)</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+</table>
+
+<br><br>
+
+<table>
+<tr><td class='main' colspan='3'><b>Ceny - PayPal / PaySafeCard</b></tr></td>
+  <tr>
+    <th class='th-item'><b>Przedmiot</b></th>
+    <th class='th-old'><b>Stara cena</b></th>
+    <th class='th-new'><b>Nowa cena</b></th>
+  </tr>
+  <tr>
+    <td>500 tokenów</td>
+    <td>5 zł</td>
+    <td>5 zł</td>
+  </tr>
+  <tr>
+    <td>1000 tokenów</td>
+    <td>10 zł</td>
+    <td>10 zł</td>
+  </tr>
+  <tr>
+    <td>2000 tokenów</td>
+    <td>20 zł</td>
+    <td>20 zł</td>
+  </tr>
+  <tr>
+    <td>3000 tokenów</td>
+    <td>30 zł</td>
+    <td>30 zł</td>
+  </tr>
+  <tr>
+    <td>5500 tokenów</td>
+    <td>50 zł</td>
+    <td>50 zł</td>
+  </tr>
+  <tr>
+    <td>12 000 tokenów</td>
+    <td>100 zł</td>
+    <td>100 zł</td>
+  </tr>
+  <tr>
+    <td>VIP (30 dni)</td>
+    <td>20 zł</td>
+    <td>20 zł</td>
+  </tr>
+  <tr>
+    <td>VIP (na zawsze)</td>
+    <td>70 zł</td>
+    <td>70 zł</td>
+  </tr>
+  <tr>
+    <td>MegaVIP (30 dni)</td>
+    <td>30 zł</td>
+    <td>30 zł</td>
+  </tr>
+  <tr>
+    <td>MegaVIP (na zawsze)</td>
+    <td>140 zł</td>
+    <td>140 zł</td>
+  </tr>
+  <tr>
+    <td>MegaVIP+ (30 dni)</td>
+    <td>30 zł</td>
+    <td>30 zł</td>
+  </tr>
+  <tr>
+    <td>MegaVIP+ (365 dni)</td>
+    <td>200 zł</td>
+    <td>200 zł</td>
+  </tr>
+</table>
+
+<br><br>
+
+<table>
+<tr><td class='main' colspan='3'><b>Ceny - Przelew</b></tr></td>
+  <tr>
+    <th class='th-item'><b>Przedmiot</b></th>
+    <th class='th-old'><b>Stara cena</b></th>
+    <th class='th-new'><b>Nowa cena</b></th>
+  </tr>
+  <tr>
+    <td>500 tokenów</td>
+    <td>5 zł</td>
+    <td>5,50 zł</td>
+  </tr>
+  <tr>
+    <td>1000 tokenów</td>
+    <td>10 zł</td>
+    <td>11 zł</td>
+  </tr>
+  <tr>
+    <td>2000 tokenów</td>
+    <td>20 zł</td>
+    <td>22 zł</td>
+  </tr>
+  <tr>
+    <td>3000 tokenów</td>
+    <td>30 zł</td>
+    <td>33 zł</td>
+  </tr>
+  <tr>
+    <td>5500 tokenów</td>
+    <td>50 zł</td>
+    <td>55 zł</td>
+  </tr>
+  <tr>
+    <td>12 000 tokenów</td>
+    <td>100 zł</td>
+    <td>110 zł</td>
+  </tr>
+  <tr>
+    <td>VIP (30 dni)</td>
+    <td>20 zł</td>
+    <td>22 zł</td>
+  </tr>
+  <tr>
+    <td>VIP (na zawsze)</td>
+    <td>70 zł</td>
+    <td>77 zł</td>
+  </tr>
+  <tr>
+    <td>MegaVIP (30 dni)</td>
+    <td>30 zł</td>
+    <td>33 zł</td>
+  </tr>
+  <tr>
+    <td>MegaVIP (na zawsze)</td>
+    <td>140 zł</td>
+    <td>154 zł</td>
+  </tr>
+  <tr>
+    <td>MegaVIP+ (30 dni)</td>
+    <td>30 zł</td>
+    <td>33 zł</td>
+  </tr>
+  <tr>
+    <td>MegaVIP+ (365 dni)</td>
+    <td>200 zł</td>
+    <td>220 zł</td>
+  </tr>
+</table>
+<br>
+		</div>
+<?php include("alert2.php"); ?>
+</div><div style="margin-right: 100%">
+<?php include("../inc/footer.php"); ?></div>
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js" type="text/javascript"></script>
+	<script src="../inc/js/firefly.js" type="text/javascript"></script>
+	<script src="../inc/js/main.js" type="text/javascript"></script>
+</body>
+</html>
